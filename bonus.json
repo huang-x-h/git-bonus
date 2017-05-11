@@ -1,0 +1,102 @@
+[
+    {
+        "title": "Clone a single branch in git",
+        "command": "git clone user@git-server:project_name.git -b branch_name /some/folder"
+    },
+    {
+        "title": "Compare two revisions of a file",
+        "command": "git diff <commit1> <commit2> <file_name>"
+    },
+    {
+        "title": "Compare current staged file against the repository",
+        "command": "git diff --staged <file_name>"
+    },
+    {
+        "title": "Compare current unstaged file against the repository",
+        "command": "git diff <file_name>"
+    },
+    {
+        "title": "Delete a branch on a remote repository",
+        "command": "git push origin :mybranchname"
+    },
+    {
+        "title": "",
+        "command": ""
+    },
+    {
+        "title": "Undo the last commit, leaving changes in the the index",
+        "command": "git reset --soft HEAD^"
+    },
+    {
+        "title": "Caching you HTTPS password in git",
+        "command": "git config --global credential.helper store"
+    },
+    {
+        "title": "Undo `git add` before commit",
+        "command": "git reset <file>"
+    },
+    {
+        "title": "Commit case-sensitive only filename changes in git",
+        "command": "git mv -f OldFileNameCase newfilenamecase"
+    },
+    {
+        "title": "",
+        "command": ""
+    },
+    {
+        "title": "",
+        "command": ""
+    },
+    {
+        "title": "",
+        "command": ""
+    },
+    {
+        "title": "",
+        "command": ""
+    },
+    {
+        "title": "",
+        "command": ""
+    },
+    {
+        "title": "",
+        "command": ""
+    },
+    {
+        "title": "",
+        "command": ""
+    },
+    {
+        "title": "",
+        "command": ""
+    },
+    {
+        "title": "",
+        "command": ""
+    },
+    {
+        "title": "",
+        "command": ""
+    },
+    {
+        "title": "",
+        "command": ""
+    },
+    {
+        "title": "",
+        "command": ""
+    },
+    {
+        "title": "",
+        "command": ""
+    },
+    {
+        "title": "",
+        "command": ""
+    },
+    {
+        "title": "",
+        "command": ""
+    }
+]
