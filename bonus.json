@@ -20,83 +20,23 @@
         "command": "git push origin :mybranchname"
     },
     {
-        "title": "",
-        "command": ""
+        "title": "Checkout a branch on a remote repository",
+        "command": "git checkout -b mybranchname origin/mybranchname"
     },
     {
         "title": "Undo the last commit, leaving changes in the the index",
         "command": "git reset --soft HEAD^"
     },
     {
-        "title": "Caching you HTTPS password in git",
-        "command": "git config --global credential.helper store"
-    },
-    {
         "title": "Undo `git add` before commit",
         "command": "git reset <file>"
     },
     {
+        "title": "Caching you HTTPS password in git",
+        "command": "git config --global credential.helper store"
+    },
+    {
         "title": "Commit case-sensitive only filename changes in git",
         "command": "git mv -f OldFileNameCase newfilenamecase"
-    },
-    {
-        "title": "",
-        "command": ""
-    },
-    {
-        "title": "",
-        "command": ""
-    },
-    {
-        "title": "",
-        "command": ""
-    },
-    {
-        "title": "",
-        "command": ""
-    },
-    {
-        "title": "",
-        "command": ""
-    },
-    {
-        "title": "",
-        "command": ""
-    },
-    {
-        "title": "",
-        "command": ""
-    },
-    {
-        "title": "",
-        "command": ""
-    },
-    {
-        "title": "",
-        "command": ""
-    },
-    {
-        "title": "",
-        "command": ""
-    },
-    {
-        "title": "",
-        "command": ""
-    },
-    {
-        "title": "",
-        "command": ""
-    },
-    {
-        "title": "",
-        "command": ""
-    },
-    {
-        "title": "",
-        "command": ""
-    },
-    {
-        "title": "",
-        "command": ""
     }
 ]

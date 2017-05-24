@@ -1,6 +1,6 @@
 const fs = require('fs');
 const inject = require('./inject');
-const separator = '/n';
+const separator = '\n';
 
 var readmePath = './README.md';
 
@@ -19,11 +19,11 @@ fs.readFile('./bonus.json', function (err, data) {
   let tocs = [];
   let contents = [];
   bonus.forEach((item) => {
-    tocs.push('* [${title}](#' + slugify(item.title) + ')\n');
+    tocs.push(`* [${item.title}](#` + slugify(item.title) + ')');
     contents.push([
-      '## ' + data.title,
+      '## ' + item.title,
       '```sh',
-      data.tip,
+      item.command,
       '```'
     ].join(separator));
   });
