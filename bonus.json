@@ -1,42 +1,66 @@
 [
-    {
-        "title": "Clone a single branch in git",
-        "command": "git clone user@git-server:project_name.git -b branch_name /some/folder"
-    },
-    {
-        "title": "Compare two revisions of a file",
-        "command": "git diff <commit1> <commit2> <file_name>"
-    },
-    {
-        "title": "Compare current staged file against the repository",
-        "command": "git diff --staged <file_name>"
-    },
-    {
-        "title": "Compare current unstaged file against the repository",
-        "command": "git diff <file_name>"
-    },
-    {
-        "title": "Delete a branch on a remote repository",
-        "command": "git push origin :mybranchname"
-    },
-    {
-        "title": "Checkout a branch on a remote repository",
-        "command": "git checkout -b mybranchname origin/mybranchname"
-    },
-    {
-        "title": "Undo the last commit, leaving changes in the the index",
-        "command": "git reset --soft HEAD^"
-    },
-    {
-        "title": "Undo `git add` before commit",
-        "command": "git reset <file>"
-    },
-    {
-        "title": "Caching you HTTPS password in git",
-        "command": "git config --global credential.helper store"
-    },
-    {
-        "title": "Commit case-sensitive only filename changes in git",
-        "command": "git mv -f OldFileNameCase newfilenamecase"
-    }
+  {
+    "title": "Clone a single branch in git",
+    "command": "git clone user@git-server:project_name.git -b branch_name /some/folder"
+  },
+  {
+    "title": "Compare two revisions of a file",
+    "command": "git diff <commit1> <commit2> <file_name>"
+  },
+  {
+    "title": "Compare current staged file against the repository",
+    "command": "git diff --staged <file_name>"
+  },
+  {
+    "title": "Compare current unstaged file against the repository",
+    "command": "git diff <file_name>"
+  },
+  {
+    "title": "Delete a branch on a remote repository",
+    "command": "git push origin :mybranchname"
+  },
+  {
+    "title": "Checkout a branch on a remote repository",
+    "command": "git checkout -b mybranchname origin/mybranchname"
+  },
+  {
+    "title": "Undo the last commit, leaving changes in the the index",
+    "command": "git reset --soft HEAD^"
+  },
+  {
+    "title": "Discard all local changes in your working directory",
+    "command": "git reset --hard HEAD"
+  },
+  {
+    "title": "Undo `git add` before commit",
+    "command": "git reset <file>"
+  },
+  {
+    "title": "Local branch look identical to remote branch",
+    "command": "git reset --hard origin/master"
+  },
+  {
+    "title": "Caching you HTTPS password in git",
+    "command": "git config --global credential.helper store"
+  },
+  {
+    "title": "Commit case-sensitive only filename changes in git",
+    "command": "git mv -f OldFileNameCase newfilenamecase"
+  },
+  {
+    "title": "Squash Multiple Commits",
+    "command": "git rebase -i HEAD~2"
+  },
+  {
+    "title": "Stash Uncommitted Changes",
+    "command": "git stash"
+  },
+  {
+    "title": "Who changed what and when in <file>",
+    "command": "git blame <file>"
+  },
+  {
+    "title": "Create branch without any parents",
+    "command": "git checkout --orphan mybranchname"
+  }
 ]
