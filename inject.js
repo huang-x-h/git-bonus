@@ -8,7 +8,7 @@
 function inject(content, options) {
   let tag = options.tag;
   let startTagReg = new RegExp(`<!-- inject:${tag} -->`, 'g');
-  let endTagReg = /<!-- endinject -->/;
+  let endTagReg = /<!-- endinject -->/g;
   let toInject = [options.content];
 
   let startMatch = startTagReg.exec(content);

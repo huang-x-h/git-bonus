@@ -15,7 +15,7 @@ function slugify(text) {
 fs.readFile('./bonus.json', function (err, data) {
   if (err) return;
 
-  let bonus = JSON.parse(data);
+  let bonus = JSON.parse(data.toString());
   let tocs = [];
   let contents = [];
   bonus.forEach((item) => {

@@ -10,10 +10,15 @@
 * [Delete a branch on a remote repository](#delete-a-branch-on-a-remote-repository)
 * [Checkout a branch on a remote repository](#checkout-a-branch-on-a-remote-repository)
 * [Undo the last commit, leaving changes in the the index](#undo-the-last-commit,-leaving-changes-in-the-the-index)
+* [Discard all local changes in your working directory](#discard-all-local-changes-in-your-working-directory)
 * [Undo `git add` before commit](#undo-`git-add`-before-commit)
+* [Local branch look identical to remote branch](#local-branch-look-identical-to-remote-branch)
 * [Caching you HTTPS password in git](#caching-you-https-password-in-git)
 * [Commit case-sensitive only filename changes in git](#commit-case-sensitive-only-filename-changes-in-git)
-<!-- endinject -->
+* [Squash Multiple Commits](#squash-multiple-commits)
+* [Stash Uncommitted Changes](#stash-uncommitted-changes)
+* [Who changed what and when in <file>](#who-changed-what-and-when-in-<file>)
+* [Create branch without any parents](#create-branch-without-any-parents)
 
 <!-- inject:content -->
 ## Clone a single branch in git
@@ -44,9 +49,17 @@ git checkout -b mybranchname origin/mybranchname
 ```sh
 git reset --soft HEAD^
 ```
+## Discard all local changes in your working directory
+```sh
+git reset --hard HEAD
+```
 ## Undo `git add` before commit
 ```sh
 git reset <file>
+```
+## Local branch look identical to remote branch
+```sh
+git reset --hard origin/master
 ```
 ## Caching you HTTPS password in git
 ```sh
@@ -56,4 +69,19 @@ git config --global credential.helper store
 ```sh
 git mv -f OldFileNameCase newfilenamecase
 ```
-<!-- endinject -->
+## Squash Multiple Commits
+```sh
+git rebase -i HEAD~2
+```
+## Stash Uncommitted Changes
+```sh
+git stash
+```
+## Who changed what and when in <file>
+```sh
+git blame <file>
+```
+## Create branch without any parents
+```sh
+git checkout --orphan mybranchname
+```
