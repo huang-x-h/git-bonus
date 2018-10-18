@@ -20,12 +20,7 @@ fs.readFile('./bonus.json', function (err, data) {
   let contents = [];
   bonus.forEach((item) => {
     tocs.push(`* [${item.title}](#` + slugify(item.title) + ')');
-    contents.push([
-      '## ' + item.title,
-      '```sh',
-      item.command,
-      '```'
-    ].join(separator));
+    contents.push(['## ' + item.title, '```sh'].concat(item.command).concat('```').join(separator));
   });
 
   fs.readFile(readmePath, function (err, data) {

@@ -21,6 +21,7 @@ function inject(content, options) {
 
     let newContent = content.slice(0, startMatch.index);
     toInject.unshift(startMatch[0]);
+    toInject.push(endMatch[0]);
     newContent += toInject.join('\n');
     newContent += content.slice(endTagReg.lastIndex);
 

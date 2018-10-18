@@ -62,5 +62,29 @@
   {
     "title": "Create branch without any parents",
     "command": "git checkout --orphan mybranchname"
+  },
+  {
+    "title": "Delete local branches that have been removed from remote on fetch/pull",
+    "command": "git config --global fetch.prune true"
+  },
+  {
+    "title": "Enable Git's autosquash feature by default",
+    "command": "git config --global rebase.autosquash true"
+  },
+  {
+    "title": "Quickly checkout the previous branch you were on",
+    "command": "git checkout -"
+  },
+  {
+    "title": "Delete local branches which have already been merged into master",
+    "command": "git branch --merged master | grep -v \"master\" | xargs -n 1 git branch -d"
+  },
+  {
+    "title": "Want to change the commit message",
+    "command": "git commit --amend -m \"New commit message\""
+  },
+  {
+    "title": "Add files to the previous commit",
+    "command": ["git add file", "git commit --amend --no-edit"]
   }
 ]

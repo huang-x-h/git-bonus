@@ -19,7 +19,13 @@
 * [Stash Uncommitted Changes](#stash-uncommitted-changes)
 * [Who changed what and when in <file>](#who-changed-what-and-when-in-<file>)
 * [Create branch without any parents](#create-branch-without-any-parents)
-
+* [Delete local branches that have been removed from remote on fetch/pull](#delete-local-branches-that-have-been-removed-from-remote-on-fetch/pull)
+* [Enable Git's autosquash feature by default](#enable-git's-autosquash-feature-by-default)
+* [Quickly checkout the previous branch you were on](#quickly-checkout-the-previous-branch-you-were-on)
+* [Delete local branches which have already been merged into master](#delete-local-branches-which-have-already-been-merged-into-master)
+* [Want to change the commit message](#want-to-change-the-commit-message)
+* [Add files to the previous commit](#add-files-to-the-previous-commit)
+<!-- endinject -->
 <!-- inject:content -->
 ## Clone a single branch in git
 ```sh
@@ -85,3 +91,29 @@ git blame <file>
 ```sh
 git checkout --orphan mybranchname
 ```
+## Delete local branches that have been removed from remote on fetch/pull
+```sh
+git config --global fetch.prune true
+```
+## Enable Git's autosquash feature by default
+```sh
+git config --global rebase.autosquash true
+```
+## Quickly checkout the previous branch you were on
+```sh
+git checkout -
+```
+## Delete local branches which have already been merged into master
+```sh
+git branch --merged master | grep -v "master" | xargs -n 1 git branch -d
+```
+## Want to change the commit message
+```sh
+git commit --amend -m "New commit message"
+```
+## Add files to the previous commit
+```sh
+git add file
+git commit --amend --no-edit
+```
+<!-- endinject -->
