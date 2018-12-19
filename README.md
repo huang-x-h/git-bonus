@@ -25,6 +25,7 @@
 * [Delete local branches which have already been merged into master](#delete-local-branches-which-have-already-been-merged-into-master)
 * [Want to change the commit message](#want-to-change-the-commit-message)
 * [Add files to the previous commit](#add-files-to-the-previous-commit)
+* [To push a single tag or all tags](#to-push-a-single-tag-or-all-tags)
 <!-- endinject -->
 <!-- inject:content -->
 ## Clone a single branch in git
@@ -115,5 +116,10 @@ git commit --amend -m "New commit message"
 ```sh
 git add file
 git commit --amend --no-edit
+```
+## To push a single tag or all tags
+```sh
+git push origin <tag_name>
+git push --tags
 ```
 <!-- endinject -->
