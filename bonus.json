@@ -90,5 +90,9 @@
   {
     "title": "To push a single tag or all tags",
     "command": ["git push origin <tag_name>", "git push --tags"]
+  },
+  {
+    "title": "Count number of lines in a git repository",
+    "command": "git ls-files | xargs cat | wc -l"
   }
 ]
