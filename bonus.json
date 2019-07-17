@@ -94,5 +94,9 @@
   {
     "title": "Count number of lines in a git repository",
     "command": "git ls-files | xargs cat | wc -l"
+  },
+  {
+    "title": "Count number of lines changed between two commit",
+    "command": "git diff --shortstat <commit1> <commit2>"
   }
 ]

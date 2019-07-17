@@ -27,6 +27,7 @@
 * [Add files to the previous commit](#add-files-to-the-previous-commit)
 * [To push a single tag or all tags](#to-push-a-single-tag-or-all-tags)
 * [Count number of lines in a git repository](#count-number-of-lines-in-a-git-repository)
+* [Count number of lines changed between two commit](#count-number-of-lines-changed-between-two-commit)
 <!-- endinject -->
 <!-- inject:content -->
 ## Clone a single branch in git
@@ -126,6 +127,10 @@ git push --tags
 ## Count number of lines in a git repository
 ```sh
 git ls-files | xargs cat | wc -l
+```
+## Count number of lines changed between two commit
+```sh
+git diff --shortstat <commit1> <commit2>
 ```
 <!-- endinject -->
 
