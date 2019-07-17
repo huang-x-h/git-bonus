@@ -26,6 +26,7 @@
 * [Want to change the commit message](#want-to-change-the-commit-message)
 * [Add files to the previous commit](#add-files-to-the-previous-commit)
 * [To push a single tag or all tags](#to-push-a-single-tag-or-all-tags)
+* [Count number of lines in a git repository](#count-number-of-lines-in-a-git-repository)
 <!-- endinject -->
 <!-- inject:content -->
 ## Clone a single branch in git
@@ -121,6 +122,10 @@ git commit --amend --no-edit
 ```sh
 git push origin <tag_name>
 git push --tags
+```
+## Count number of lines in a git repository
+```sh
+git ls-files | xargs cat | wc -l
 ```
 <!-- endinject -->
 
