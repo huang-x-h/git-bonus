@@ -32,7 +32,7 @@
     "command": "git reset --hard HEAD"
   },
   {
-    "title": "Undo `git add` before commit",
+    "title": "Undo git add before commit",
     "command": "git reset <file>"
   },
   {
@@ -98,5 +98,22 @@
   {
     "title": "Count number of lines changed between two commit",
     "command": "git diff --shortstat <commit1> <commit2>"
+  },
+  {
+    "title": "How to remove a submodule",
+    "command": [
+      "1.Delete the relevant section from the .gitmodules file",
+      "  rm -f .gitmodules",
+      "2.Stage the .gitmodules changes",
+      "  git add .gitmodules",
+      "3.Delete the relevant section from .git/config",
+      "  rm -f .git/config",
+      "4.Remove the submodule files from the working tree and index",
+      "  git rm --cached path_to_submodule",
+      "5.Remove the submodule's .git directory",
+      "  rm -rf .git/modules/path_to_submodule",
+      "6.Commit the changes",
+      "  git commit -m \"Removed submodule <name>\""
+    ]
   }
 ]
