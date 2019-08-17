@@ -11,7 +11,7 @@
 * [Checkout a branch on a remote repository](#checkout-a-branch-on-a-remote-repository)
 * [Undo the last commit, leaving changes in the the index](#undo-the-last-commit,-leaving-changes-in-the-the-index)
 * [Discard all local changes in your working directory](#discard-all-local-changes-in-your-working-directory)
-* [Undo `git add` before commit](#undo-`git-add`-before-commit)
+* [Undo git add before commit](#undo-git-add-before-commit)
 * [Local branch look identical to remote branch](#local-branch-look-identical-to-remote-branch)
 * [Caching you HTTPS password in git](#caching-you-https-password-in-git)
 * [Commit case-sensitive only filename changes in git](#commit-case-sensitive-only-filename-changes-in-git)
@@ -28,6 +28,7 @@
 * [To push a single tag or all tags](#to-push-a-single-tag-or-all-tags)
 * [Count number of lines in a git repository](#count-number-of-lines-in-a-git-repository)
 * [Count number of lines changed between two commit](#count-number-of-lines-changed-between-two-commit)
+* [How to remove a submodule](#how-to-remove-a-submodule)
 <!-- endinject -->
 <!-- inject:content -->
 ## Clone a single branch in git
@@ -62,7 +63,7 @@ git reset --soft HEAD^
 ```sh
 git reset --hard HEAD
 ```
-## Undo `git add` before commit
+## Undo git add before commit
 ```sh
 git reset <file>
 ```
@@ -131,6 +132,21 @@ git ls-files | xargs cat | wc -l
 ## Count number of lines changed between two commit
 ```sh
 git diff --shortstat <commit1> <commit2>
+```
+## How to remove a submodule
+```sh
+1.Delete the relevant section from the .gitmodules file
+  rm -f .gitmodules
+2.Stage the .gitmodules changes
+  git add .gitmodules
+3.Delete the relevant section from .git/config
+  rm -f .git/config
+4.Remove the submodule files from the working tree and index
+  git rm --cached path_to_submodule
+5.Remove the submodule's .git directory
+  rm -rf .git/modules/path_to_submodule
+6.Commit the changes
+  git commit -m "Removed submodule <name>"
 ```
 <!-- endinject -->
 
